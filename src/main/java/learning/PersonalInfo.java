@@ -10,6 +10,7 @@ public class PersonalInfo {
         boolean student = false;
         String favoriteFood = "Pizza";
 
+        
         System.out.println("====================");
         System.out.println("   PERSONAL INFO");
         System.out.println("====================");
