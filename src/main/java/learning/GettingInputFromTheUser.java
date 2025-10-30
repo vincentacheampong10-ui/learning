@@ -41,7 +41,5 @@ public class GettingInputFromTheUser {
         }
         scanner.close();
 
-
-
     }
 }
