@@ -5,6 +5,12 @@ public class Person {
     int age;
     double height;
 
+    public Person(String name, int age, double height) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+    }
+
     void introduce() {
         System.out.println("Hi, my name is " + name + ".");
         System.out.println("I am " + age + " years old and " + height + " cm tall.");
