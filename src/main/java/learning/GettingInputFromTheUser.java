@@ -7,7 +7,6 @@ public class GettingInputFromTheUser {
 
         Scanner scanner = new Scanner(System.in);
         String again = "yes";
-        String breakProgram = "no";
 
         while (again.equalsIgnoreCase("yes")) {
 
@@ -25,22 +24,20 @@ public class GettingInputFromTheUser {
             System.out.print("Choose one:");
             int choice = scanner.nextInt();
 
+
             switch (choice) {
                 case 1:
-                    System.out.println("Result:" + (num1 + num2));
+                    System.out.println("Result: " + addition(num1, num2));
                     break;
                 case 2:
-                    System.out.println("Result:" + (num1 - num2));
+                    System.out.println("Result:" + subtraction(num1, num2));
                     break;
                 case 3:
-                    System.out.println("Result:" + (num1 * num2));
+                    System.out.println("Result:" + multiply(num1, num2));
                     break;
                 case 4:
-                    if (num2 == 0) {
-                        System.out.println("Error: Cannot divide by zero!");
-                    } else {
-                        System.out.println("Result:" + (num1 / num2));
-                    }
+                    System.out.println("Result:" + divide(num1, num2));
+
                     break;
                 default:
                     System.out.println("Invalid choice.");
@@ -49,6 +46,29 @@ public class GettingInputFromTheUser {
             again = scanner.next();
 
         }
+
         scanner.close();
     }
+
+    public static double addition(double num1, double num2) {
+        return num1 + num2;
+    }
+
+    public static double subtraction(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public static double divide(double a, double b) {
+        if (b == 0) {
+            System.out.println("Error: Cannot divide by zero!");
+            return Double.NaN; // means “Not a Number”
+        }
+        return a / b;
+    }
 }
+
+
