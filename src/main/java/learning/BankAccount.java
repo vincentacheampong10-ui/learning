@@ -36,4 +36,9 @@ public class BankAccount {
             System.out.println("Successfully withdrew $" + amount + ". New balance: $" + balance);
         }
     }
+
+    public void displayAccountInfo() {
+        System.out.printf("Account Holder: %s | Current Balance: $%.2f%n", accountHolderName, balance);
+    }
 }
+
